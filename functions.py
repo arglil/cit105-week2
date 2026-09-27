@@ -72,3 +72,19 @@ def truncate(text, limit=50):
         return "." * limit
 
     return text[: limit - 3] + "..."
+
+
+def safe_filename(text):
+    """Convert text into a safe filename with no unsafe characters."""
+    if not isinstance(text, str):
+        raise TypeError("text must be a string.")
+
+    if text == "":
+        return ""
+
+    safe = text.strip().replace(" ", "_")
+    unsafe = ["/", "\\", "'", '"']
+    for char in unsafe:
+        safe = safe.replace(char, "")
+
+    return safe
