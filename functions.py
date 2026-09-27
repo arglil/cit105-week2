@@ -14,3 +14,15 @@ def line_total(price, qty):
     if qty < 0:
         raise ValueError("qty must be non-negative.")
     return price * qty
+
+
+def initials(full_name):
+    """Return the uppercase initials of each word in a full name."""
+    if not isinstance(full_name, str):
+        raise TypeError("full_name must be a string.")
+
+    words = full_name.split()
+    if not words:
+        return ""
+
+    return "".join(word[0].upper() for word in words)
