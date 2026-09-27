@@ -1,3 +1,40 @@
+# QR Code Generator
+
+A Streamlit application that generates scannable QR codes from text or URLs.
+
+## Features
+
+- Accepts text or URLs up to 1,000 characters
+- Displays a live character counter
+- Generates and previews a scannable QR code
+- Allows the user to change image size
+- Allows the user to select the QR foreground color
+- Allows the user to adjust the quiet-zone border
+- Warns when a URL appears malformed
+- Rejects empty or whitespace-only input
+- Downloads the QR code as a PNG with a filename derived from the input
+- Generates the image in memory without temporary files
+
+## Screenshot
+
+![QR Code Generator running](images/qr-generator.png)
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/arglil/cit105-week2.git
+   
+cd cit105-week2
+
+
+python -m pip install -r requirements.txt
+
+streamlit run app.py
+
+
+
+
 # CIT 105 Week 2 - Function Library Exercise Set
 
 This project contains a Python function library with six reusable functions. Each function returns a result instead of printing it. The `demo.py` file demonstrates valid and invalid inputs for each function.
