@@ -54,3 +54,21 @@ def is_valid_url(text):
         return False
 
     return True
+
+
+def truncate(text, limit=50):
+    """Return text with an ellipsis if it exceeds the given character limit."""
+    if not isinstance(text, str):
+        raise TypeError("text must be a string.")
+    if not isinstance(limit, int) or isinstance(limit, bool):
+        raise TypeError("limit must be an integer.")
+    if limit < 0:
+        raise ValueError("limit must be non-negative.")
+
+    if len(text) <= limit:
+        return text
+
+    if limit <= 3:
+        return "." * limit
+
+    return text[: limit - 3] + "..."
