@@ -26,3 +26,31 @@ def initials(full_name):
         return ""
 
     return "".join(word[0].upper() for word in words)
+
+
+def is_valid_url(text):
+    """Return True if text is a valid URL and False otherwise."""
+    if not isinstance(text, str):
+        return False
+
+    text = text.strip()
+    if not text:
+        return False
+
+    if any(ch.isspace() for ch in text):
+        return False
+
+    if "://" not in text:
+        return False
+
+    scheme, rest = text.split("://", 1)
+    if scheme not in ("http", "https"):
+        return False
+    if not rest:
+        return False
+
+    domain = rest.split("/", 1)[0]
+    if not domain or "." not in domain:
+        return False
+
+    return True
