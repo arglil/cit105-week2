@@ -1,0 +1,7 @@
+name,url
+Alice Johnson,https://example.com/alice
+Bob Smith,https://example.com/bob
+Charlie Brown,https://example.com/charlie
+Alice Johnson,https://example.com/alice-second
+Missing URL,
+,https://example.com/missing-name
