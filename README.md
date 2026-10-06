@@ -117,3 +117,24 @@ Example:
 
 GitHub Copilot was used to assist with generating and reviewing the Python functions and demonstration code for this assignment. I reviewed the generated code, tested the functions, and verified that the results met the assignment requirements.
 
+
+## Batch Mode
+
+The QR Code Generator now supports two modes:
+
+- **Single code** generates one QR code from text or a URL.
+- **Batch from CSV** generates multiple QR codes from a CSV file and packages them into one downloadable ZIP file.
+
+### CSV Format
+
+Batch mode expects a CSV file with two required columns:
+
+- `name` - used to create the PNG filename
+- `url` - encoded into the QR code
+
+Example:
+
+```csv
+name,url
+Alice Johnson,https://example.com/alice
+Bob Smith,https://example.com/bob
